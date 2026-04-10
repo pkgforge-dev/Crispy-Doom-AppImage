@@ -1,10 +1,9 @@
-#!/bin/false
+#!/bin/sh
 
-_make_symlinks() {
+_make_symlinks_in_path() {
 	[ -n "$APPIMAGE" ] || return 1
 	[ -n "$APPDIR" ] || return 1
-	bindir=${XDG_BIN_HOME:-~/.local/bin}
-	mkdir -p "$bindir"
+	mkdir -p "$BINDIR"
 	cd "$APPDIR"/bin
 	set +e
 	set -- ./crispy*
@@ -15,5 +14,5 @@ _make_symlinks() {
 }
 
 if [ "$1" = '--make-symlinks' ]; then
-	_make_symlinks
+	_make_symlinks_in_path
 fi
