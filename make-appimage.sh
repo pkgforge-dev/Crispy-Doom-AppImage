@@ -12,7 +12,7 @@ export DESKTOP=/usr/share/applications/io.github.fabiangreffrath.Doom.desktop
 export STARTUPWMCLASS=
 
 # Deploy dependencies
-quick-sharun /
+quick-sharun /usr/bin/crispy-* /usr/lib/libfluidsynth.so*
 
 # Additional changes can be done in between here
 
