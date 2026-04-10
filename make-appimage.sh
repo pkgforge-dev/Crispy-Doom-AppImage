@@ -9,7 +9,7 @@ export ADD_HOOKS="self-updater.bg.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=/usr/share/icons/hicolor/128x128/apps/crispy-doom.png
 export DESKTOP=/usr/share/applications/io.github.fabiangreffrath.Doom.desktop
-export STARTUPWMCLASS=
+export STARTUPWMCLASS=crispy-doom
 
 # Deploy dependencies
 quick-sharun /usr/bin/crispy-* /usr/lib/libfluidsynth.so*
