@@ -7,8 +7,9 @@ export ARCH
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.bg.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
-export ICON=/
-export DESKTOP=/
+export ICON=/usr/share/icons/hicolor/128x128/apps/crispy-doom.png
+export DESKTOP=/usr/share/applications/io.github.fabiangreffrath.Doom.desktop
+export STARTUPWMCLASS=
 
 # Deploy dependencies
 quick-sharun /
