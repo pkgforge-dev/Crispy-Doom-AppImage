@@ -8,7 +8,7 @@ _make_symlinks_in_path() {
 	set +e
 	set -- ./crispy*
 	for b do
-		ln -sv "$APPIMAGE" "$bindir"/"${b##*/}" 2>/dev/null
+		ln -sv "$APPIMAGE" "$BINDIR"/"${b##*/}" 2>/dev/null
 	done
 	exit 0
 }
