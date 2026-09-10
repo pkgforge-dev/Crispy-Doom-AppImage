@@ -52,3 +52,9 @@ autoreconf -fi
 ./configure --prefix=/usr
 make -j$(nproc)
 make install
+
+rm /usr/bin/crispy-heretic-setup /usr/bin/crispy-hexen-setup /usr/bin/crispy-strife-setup
+mv /usr/bin/crispy-doom-setup bin/crispy-setup
+for game in doom heretic hexen strife; do
+	ln -s crispy-setup bin/crispy-${game}-setup
+done
