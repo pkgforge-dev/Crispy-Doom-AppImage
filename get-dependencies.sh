@@ -42,8 +42,8 @@ if [ "${DEVEL_RELEASE-}" = 1 ]; then
     git clone --depth 1 "$REPO" ./crispy-doom
 else
 	echo "Making stable build of Crispy Doom..."
-	VERSION="$(git ls-remote --tags --sort="v:refname" "$REPO" | tail -n1 | sed 's/.*\///; s/\^{}//; s/^v//')"
-	git clone --branch crispy-doom-"$VERSION" --single-branch --depth 1 "$REPO" ./crispy-doom
+	VERSION="$(git ls-remote --tags --sort="v:refname" "$REPO" | grep 'refs/tags/crispy-doom-[0-9]' | grep -v '\^{}' | tail -n1 | sed 's/.*\///; s/^crispy-doom-//')"
+	git clone --branch "crispy-doom-$VERSION" --single-branch --depth 1 "$REPO" ./crispy-doom
 fi
 echo "$VERSION" > ~/version
 
