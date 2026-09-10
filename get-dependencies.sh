@@ -19,19 +19,6 @@ echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano libdecor-mini
 
-# Comment this out if you need an AUR package
-#make-aur-package PACKAGENAME
-
-# If the application needs to be manually built that has to be done down here
-
-# if you also have to make nightly releases check for DEVEL_RELEASE = 1
-#if [ "${DEVEL_RELEASE-}" = 1 ]; then
-#	package=crispy-doom-git
-#else
-#	package=crispy-doom
-#fi
-#make-aur-package "$package"
-#pacman -Q "$package" | awk '{print $2; exit}' > ~/version
 echo "Building Crispy Doom..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/fabiangreffrath/crispy-doom"
